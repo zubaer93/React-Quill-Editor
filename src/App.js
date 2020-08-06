@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [value, setValue] = useState();
+
+    useEffect( () => {
+      //My plan was to catch the html and add the collapseable properties with it. But it didn't feel like the right aproach to me. 
+      console.log(value);
+    });
+
+    return (
+      <ReactQuill 
+        theme="snow" 
+        value={value} 
+        onChange={setValue}
+      />
+    );
 }
 
 export default App;
+ 
