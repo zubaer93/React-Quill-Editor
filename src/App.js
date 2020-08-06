@@ -8,6 +8,7 @@ function App() {
 
     useEffect( () => {
       //My plan was to catch the html and add the collapseable properties with it. But it didn't feel like the right aproach to me. 
+      
       console.log(value);
     });
 
